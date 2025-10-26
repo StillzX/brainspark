@@ -7,6 +7,11 @@ body {
 }
 
 #login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
     background: #fff;
     border: 1px solid #ccc;
     padding: 25px;
@@ -49,4 +54,10 @@ button:hover {
     color: red;
     text-align: center;
     font-weight: bold;
+}
+
+.welcome-box {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
 }
