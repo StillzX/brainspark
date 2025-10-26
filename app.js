@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (data.status === "sucesso") {
                 sessionStorage.setItem("quiz_jogador_id", data.jogador_id);
                 sessionStorage.setItem("quiz_sala_id", data.sala_id);
-                window.location.href = "room.php";
+                window.location.href = "room.html";
             } else {
                 msgErro.textContent = data.mensagem || "Erro desconhecido.";
             }

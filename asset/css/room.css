@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#area-jogadores {
+    float: right;
+    width: 30%;
+    background: #e2e2e2;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#area-jogo {
+    float: left;
+    width: 65%;
+}
+
+#lista-jogadores li {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+#btn-iniciar-jogo {
+    border-radius: 30px;
+    font-size: 1.5em;
+    padding: 20px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+#btn-iniciar-jogo:hover {
+    background-color: darkgreen;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainsparks | Quiz Room</title>
+
+    <link rel="stylesheet" href="asset/css/room.css">
+</head>
+<body>
+
+    <h1 id="titulo-sala">Quiz room code: <span id="codigo-sala">...</span></h1>
+    <h2 id="status-sala">Waiting for players...</h2>
+
+    <div id="area-jogo">
+        <div id="pergunta-container" style="display:none;">
+            <h3 id="texto-pergunta"></h3>
+            <div id="opcoes-respostas">
+                </div>
+        </div>
+
+        <button id="btn-iniciar-jogo" style="display:none;">Start game!</button>
+    </div>
+
+    <div id="area-jogadores">
+        <h3>Players in this room (<span id="total-jogadores">0</span>)</h3>
+        <ul id="lista-jogadores">
+        </ul>
+    </div>
+
+    <script src="sala.js" defer></script>
+</body>
+</html>

@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json');
 
 require __DIR__ . '/vendor/autoload.php';
 
@@ -102,5 +103,4 @@ if ($salaEncontrada) {
     ];
 }
 
-header('Content-Type: application/json');
 echo json_encode($resposta_json);
