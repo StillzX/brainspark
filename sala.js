@@ -185,6 +185,16 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 
+    window.addEventListener("beforeunload", function (event) {
+
+        const data = JSON.stringify({
+            jogador_id: meu_jogador_id
+        });
+        navigator.sendBeacon("player_leave.php", new Blob([data], { type: 'application/json' }));
+
+        // (event.returnValue = 'Tem certeza que quer sair?';)
+    });
+
     buscarAtualizacoes();
     const gameLoop = setInterval(buscarAtualizacoes, 2000);
 });
