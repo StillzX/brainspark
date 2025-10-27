@@ -8,24 +8,34 @@
     <link rel="stylesheet" href="asset/css/room.css">
 </head>
 <body>
+    <div id="painel-jogo">
+        <h1 id="titulo-sala">Room: <span id="codigo-sala">...</span></h1>
+        
+        <div id="area-lobby">
+            <h2 id="status-sala">Waiting for players...</h2>
+            <button id="btn-iniciar-jogo" style="display:none; font-size: 1.5em; padding: 20px;">Start Game!</button>
+        </div>
 
-    <h1 id="titulo-sala">Quiz room code: <span id="codigo-sala">...</span></h1>
-    <h2 id="status-sala">Waiting for players...</h2>
-
-    <div id="area-jogo">
-        <div id="pergunta-container" style="display:none;">
-            <h3 id="texto-pergunta"></h3>
+        <div id="area-jogo">
+            <p id="timer">Time: <span>--</span></p>
+            <h3 id="categoria-pergunta"></h3>
+            <h2 id="texto-pergunta"></h2>
             <div id="opcoes-respostas">
                 </div>
         </div>
 
-        <button id="btn-iniciar-jogo" style="display:none;">Start game!</button>
+        <div id="area-ranking">
+            <h2>Game Over!</h2>
+            <h3>Final Ranking:</h3>
+            <ul id="ranking-lista">
+            </ul>
+        </div>
     </div>
 
-    <div id="area-jogadores">
-        <h3>Players in this room (<span id="total-jogadores">0</span>)</h3>
+    <div id="painel-jogadores">
+        <h3>Players (<span id="total-jogadores">0</span>)</h3>
         <ul id="lista-jogadores">
-        </ul>
+            </ul>
     </div>
 
     <script src="sala.js" defer></script>

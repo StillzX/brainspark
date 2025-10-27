@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 header('Content-Type: application/json');
 
 require __DIR__ . '/vendor/autoload.php';
@@ -79,6 +81,8 @@ if ($salaEncontrada) {
     if ($salaEncontrada['room_status'] === 'waiting') {
         $jogador_id = joinRoom($pdo, $salaEncontrada['id_room'], $username);
 
+        $_SESSION['quiz_jogador_id'] = $jogador_id;
+
         $resposta_json = [
             'status' => 'sucesso',
             'acao' => 'entrou',
@@ -94,6 +98,8 @@ if ($salaEncontrada) {
 } else {
     // retorna o id da sala criada e o id do primeiro jogador (você)
     $info = createRoomAndJoin($pdo, $code_room_user, $username);
+
+    $_SESSION['quiz_jogador_id'] = $info['jogador_id'];
 
     $resposta_json = [
         'status' => 'sucesso',

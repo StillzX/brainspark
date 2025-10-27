@@ -1,35 +1,79 @@
+/* (Estilos simples) */
 body {
     font-family: Arial, sans-serif;
+    display: flex;
     padding: 20px;
+    gap: 20px;
 }
 
-#area-jogadores {
-    float: right;
+#painel-jogo {
+    width: 70%;
+}
+
+#painel-jogadores {
     width: 30%;
-    background: #e2e2e2;
+    background: #f4f4f4;
     padding: 10px;
     border-radius: 8px;
 }
 
-#area-jogo {
-    float: left;
-    width: 65%;
-}
-
 #lista-jogadores li {
     font-size: 1.2em;
-    margin-bottom: 5px;
 }
 
-#btn-iniciar-jogo {
-    border-radius: 30px;
-    font-size: 1.5em;
+/* Estilos do Jogo */
+#area-jogo {
+    display: none;
+}
+
+/* Começa escondido */
+#opcoes-respostas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-opcao {
     padding: 20px;
-    background-color: green;
-    color: white;
+    font-size: 1.1em;
     cursor: pointer;
 }
 
-#btn-iniciar-jogo:hover {
-    background-color: darkgreen;
+.btn-opcao:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#timer {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Estilos do Ranking */
+#area-ranking {
+    display: none;
+    text-align: center;
+}
+
+/* Começa escondido */
+#ranking-lista li {
+    list-style: none;
+    font-size: 1.3em;
+    padding: 5px;
+}
+
+.lugar-1 {
+    color: #D4AF37;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.lugar-2 {
+    color: #C0C0C0;
+    font-weight: bold;
+}
+.lugar-3 {
+    color: #CD7F32;
+    font-weight: bold;
 }
